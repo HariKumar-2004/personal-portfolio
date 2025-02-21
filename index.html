@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Kumar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/50f731521f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>Hari Kumar</h1>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Java Developer | Web Developer</p>
+                <h1>Hi, I'm <span>Hari Kumar</span> <br> from Hyderabad</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./Images/pic .png" class="about-logo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Dedicated and motivated Computer Science student with expertise in Java, C, Python, OOPS, DBMS, and Web Development. Passionate about building efficient and scalable applications.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                    </div>
+                    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Java, C, Python, OOPS</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Databases</span><br>MySQL</li>
+                            <li><span>Version Control</span><br>Git, GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor of Technology</span><br>Malla Reddy Engineering College (2021-2025) - 8.01 GPA</li>
+                            <li><span>Intermediate Education</span><br>Narayana JR. College (2019-2021) - 937/1000</li>
+                            <li><span>Secondary School</span><br>Kakatiya Olympiad School (2019) - 9.0 GPA</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span style="font-weight: bold;">Responsive Web Design</span> - FreeCodeCamp</li>
+                            <li><span style="font-weight: bold;">Java Development</span> - Udemy</li>
+                            <li><span style="font-weight: bold;">Data Science with Python</span> - Verzeo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Chess_Programming.svg/1200px-Chess_Programming.svg.png">
+                    <div class="layer">
+                        <h3>Game of Chess</h3>
+                        <p>A fully functional chess game in Python using Pygame, adhering to official chess rules.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Images/portfolio.png">
+                    <div class="layer">
+                        <h3>Personal Portfolio</h3>
+                        <p>A dynamic and visually appealing portfolio to showcase my skills and projects.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://swikblog.com/wp-content/uploads/2023/06/Gender-Predictor-Featured-Image-Square.png">
+                    <div class="layer">
+                        <h3>Gender & Age Detection</h3>
+                        <p>Implemented real-time age and gender detection using deep learning models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> harikumardhanpal@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 9390738085</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/dhanpal-harikumar"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/HariKumar-2004"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                    <a href="Hari_Resume.pdf" download class="btn btn2">Download Resume</a>
+                    
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright Hari. Made with <i class="fa-solid fa-heart"></i> by Hari Kumar</p>
+        </div>
+    </div>
+
+    <script>
+        function opentab(tabname) {
+            let tablinks = document.getElementsByClassName("tab-links");
+            let tabcontents = document.getElementsByClassName("tab-contents");
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
